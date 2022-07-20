@@ -18,6 +18,7 @@ import { EditRolesComponent } from './components/edit-roles/edit-roles.component
 import { AddRolesComponent } from './components/add-roles/add-roles.component';
 import { TokenInterceptorService } from './interceptors/token-interceptor.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BnNgIdleService } from 'bn-ng-idle';
 
 @NgModule({
   declarations: [
@@ -41,13 +42,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
+
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
       multi:true
-    }
+    },
+    BnNgIdleService
   ],
   bootstrap: [AppComponent]
 })

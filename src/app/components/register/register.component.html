@@ -25,9 +25,9 @@
           <input type="password" class="form-control" id="cpassword" name="password_confirmation" [(ngModel)]="form.password_confirmation" required>
         </div>
 
-        <!-- <div class="alert alert-danger" [hidden]="!error.password_confirmation">
+        <div class="alert alert-danger" [hidden]="!error.password_confirmation">
           {{error.password_confirmation}}
-        </div> -->
+        </div>
 
         <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Registrarse</button>
       </form>
