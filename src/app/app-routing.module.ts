@@ -55,7 +55,7 @@ const routes: Routes = [
     canActivate : [AfterLoginService]
   },
   {
-    path:'edit/:id',
+    path:'edit/roles/:id',
     component : EditRolesComponent,
     canActivate : [AfterLoginService]
   },
@@ -67,7 +67,7 @@ const routes: Routes = [
     canActivate : [AfterLoginService]
   },
   {
-    path:'edit/:id',
+    path:'edit/users/:id',
     component : EditUsersComponent,
     canActivate : [AfterLoginService]
   }

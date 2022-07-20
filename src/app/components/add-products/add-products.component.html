@@ -13,17 +13,17 @@
       <form [formGroup]="addProduct" (ngSubmit)="SaveData()">
         <div class="mb-3">
           <label for="name" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" name="name" formControlName="name">
+          <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
         </div>
 
         <div class="mb-3">
           <label for="value" class="form-label">Valor</label>
-          <input type="email" class="form-control" id="value" name="value" formControlName="value">
+          <input type="email" class="form-control" id="value" name="value" formControlName="value" required>
         </div>
 
         <div class="mb-3">
           <label for="stock" class="form-label">Stock</label>
-          <input type="stock" class="form-control" id="stock" name="stock" formControlName="stock">
+          <input type="stock" class="form-control" id="stock" name="stock" formControlName="stock" required>
         </div>
 
         <button type="submit" class="btn btn-primary" >Crear producto</button>

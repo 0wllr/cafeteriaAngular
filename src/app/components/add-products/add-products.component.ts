@@ -23,7 +23,7 @@ export class AddProductsComponent implements OnInit {
   }
 
   SaveData(){
-    this.product.AddProduct(this.addProduct.value).subscribe((result)=>{
+    this.product.addProduct(this.addProduct.value).subscribe((result)=>{
       //console.log (result);
       this.message=true;
       this.addProduct.reset({});

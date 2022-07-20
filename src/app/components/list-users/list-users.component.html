@@ -9,6 +9,7 @@
       <th scope="col">Rol</th>
       <th scope="col">Creado</th>
       <th scope="col">Actualizado</th>
+      <th scope="col">Administrar</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,11 @@
       <td>{{item.role}}</td>
       <td>{{item.created_at}}</td>
       <td>{{item.updated_at}}</td>
+      <td>
+        <a routerLink="/edit/users/{{item.id}}"><i class="fa fa-edit"></i></a>
+        &nbsp;
+        <i (click)="deleteUser(item.id)" class="fa fa-trash"></i>
+    </td>
     </tr>
   </tbody>
 </table>

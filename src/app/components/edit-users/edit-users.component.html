@@ -1,1 +1,38 @@
-<p>edit-users works!</p>
+<h3>Editar un Usuario</h3>
+
+<div class="col-8">
+  <div class="card">
+    <div class="card-header">
+      Ingrese los datos del usuario a Editar.
+    </div>
+    <div class="card-body">
+      <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Usuario actualizado con éxito</strong>
+        <button (click)="removeMessage()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="editUser" (ngSubmit)="UpdateData()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" formControlName="name">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" formControlName="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" name="password" formControlName="password">
+        </div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label">Rol</label>
+          <input type="text" class="form-control" id="role" name="role" formControlName="role">
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Actualizar usuario</button>
+      </form>
+    </div>
+  </div>
+</div>

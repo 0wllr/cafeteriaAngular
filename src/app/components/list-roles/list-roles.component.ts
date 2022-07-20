@@ -9,11 +9,18 @@ import { RolesService } from 'src/app/services/roles.service';
 export class ListRolesComponent implements OnInit {
 
   constructor(private role:RolesService) { }
+
   roleData: any=[];
   ngOnInit(): void {
     this.role.getAllRoles().subscribe((allData)=>{
       console.log(allData);
       this.roleData=allData;
    } );
+  }
+
+  deleteRole(role_id:any){
+    this.role.deleteRole(role_id).subscribe((result)=>{
+      this.ngOnInit();
+    })
   }
 }

@@ -12,7 +12,7 @@ export class ProductsService {
 
   }
 
-  AddProduct(data:any){
+  addProduct(data:any){
     console.log(data);
     return this.http.post('http://127.0.0.1:8000/api/products',data);
   }

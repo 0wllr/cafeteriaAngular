@@ -1,1 +1,24 @@
-<p>add-roles works!</p>
+<h3>Añadir un Rol</h3>
+
+<div class="col-8">
+  <div class="card">
+    <div class="card-header">
+      Ingrese los datos delrol a añadir.
+    </div>
+    <div class="card-body">
+      <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Rol añadido con éxito</strong>
+        <button (click)="removeMessage()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="addRole" (ngSubmit)="SaveData()">
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Crear Rol</button>
+      </form>
+    </div>
+  </div>
+</div>
