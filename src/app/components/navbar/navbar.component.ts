@@ -9,6 +9,7 @@ import { TokenService } from '../../services/token.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  collapsed = true;
 
   public loggedIn:boolean =false;
 

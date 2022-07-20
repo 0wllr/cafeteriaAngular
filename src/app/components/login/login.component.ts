@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     console.log(data.token);
     this.token.handle(data.token);
     this.Auth.changeAuthStatus(true);
-    this.router.navigateByUrl('/products')
+    this.router.navigateByUrl('list/products')
   }
   handleError(error:any){
     this.error= error.error.error;

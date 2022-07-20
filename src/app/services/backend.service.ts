@@ -5,7 +5,6 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class BackendService {
-
   constructor(private http:HttpClient) { }
 
   register(data:any){
@@ -15,4 +14,5 @@ export class BackendService {
   login(data:any){
     return this.http.post('http://127.0.0.1:8000/api/login',data);
   }
+
 }
