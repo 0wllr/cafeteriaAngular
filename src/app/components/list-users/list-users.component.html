@@ -1,1 +1,24 @@
-<p>list-users works!</p>
+<h3>Lista de Usuarios</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">Rol</th>
+      <th scope="col">Creado</th>
+      <th scope="col">Actualizado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of userData">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.role}}</td>
+      <td>{{item.created_at}}</td>
+      <td>{{item.updated_at}}</td>
+    </tr>
+  </tbody>
+</table>

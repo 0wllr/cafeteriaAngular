@@ -9,15 +9,19 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ListProductsComponent implements OnInit {
 
   constructor(private product:ProductsService) { }
-  productData={};
+
+  productData: any=[];
   ngOnInit(): void {
     this.product.getAllProducts().subscribe((allData)=>{
       console.log(allData);
       this.productData=allData;
    } );
 
-
-
+  }
+  deleteProduct(product_id:any){
+    this.product.deleteProduct(product_id).subscribe((result)=>{
+      this.ngOnInit();
+    })
   }
 
 }

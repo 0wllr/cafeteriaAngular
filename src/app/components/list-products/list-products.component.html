@@ -6,15 +6,21 @@
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Precio</th>
-      <th scope="col">stock</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Administrar</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr *ngFor="let item of productData">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.value}}</td>
+      <td>{{item.stock}}</td>
+      <td>
+          <a routerLink="/edit/products/{{item.id}}"><i class="fa fa-edit"></i></a>
+          &nbsp;
+          <i (click)="deleteProduct(item.id)" class="fa fa-trash"></i>
+      </td>
     </tr>
   </tbody>
 </table>

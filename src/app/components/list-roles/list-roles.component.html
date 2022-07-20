@@ -1,1 +1,20 @@
-<p>list-roles works!</p>
+<h3>Lista de Roles</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Rol</th>
+      <th scope="col">Creado</th>
+      <th scope="col">Actualizado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of roleData">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.created_at}}</td>
+      <td>{{item.updated_at}}</td>
+    </tr>
+  </tbody>
+</table>

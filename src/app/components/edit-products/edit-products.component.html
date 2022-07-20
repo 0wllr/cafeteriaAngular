@@ -1,1 +1,33 @@
-<p>edit-products works!</p>
+<h3>Editar un Producto</h3>
+
+<div class="col-8">
+  <div class="card">
+    <div class="card-header">
+      Ingrese los datos del producto a Editar.
+    </div>
+    <div class="card-body">
+      <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Producto actualizado con éxito</strong>
+        <button (click)="removeMessage()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="editProduct" (ngSubmit)="UpdateData()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" formControlName="name">
+        </div>
+
+        <div class="mb-3">
+          <label for="value" class="form-label">Valor</label>
+          <input type="email" class="form-control" id="value" name="value" formControlName="value">
+        </div>
+
+        <div class="mb-3">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="stock" class="form-control" id="stock" name="stock" formControlName="stock">
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Actualizar producto</button>
+      </form>
+    </div>
+  </div>
+</div>
