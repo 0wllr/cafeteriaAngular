@@ -1,0 +1,14 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Cafetería Konecta</a>
+      <div>
+        <a class="navbar-brand" routerLink="login" *ngIf="!loggedIn">Iniciar Sesión</a>
+        <a class="navbar-brand" routerLink="register" *ngIf="!loggedIn">Registrarse</a>
+        <a class="navbar-brand" routerLink="users" *ngIf="loggedIn">Usuarios</a>
+        <a class="navbar-brand" routerLink="roles" *ngIf="loggedIn">Roles</a>
+        <a class="navbar-brand" routerLink="products" *ngIf="loggedIn">Productos</a>
+        <a class="navbar-brand" href='#' (click)="logout($event)" *ngIf="loggedIn">Cerrar sesión</a>
+
+      </div>
+  </div>
+</nav>
